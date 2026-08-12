@@ -195,16 +195,16 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 <div class="hero">
   <div class="hero-grid"></div><div class="hero-glow"></div>
   <div class="hero-inner">
-    <div class="prob-badge">Problema Público Priorizado · Barrio Rebolo · Diagnóstico Territorial</div>
+    <div class="prob-badge">Problema Público Priorizado · Diagnóstico Territorial · Rebolo / Gran Bazar</div>
     <h1>Ficha de Levantamiento:<br><em>Desintegración Social</em><br>en Proyectos de Vivienda</h1>
     <div class="prob-text">
       <strong>Problema Público:</strong> Desintegración social ligada a un conjunto de prácticas informales, ilegales y criminales como consecuencia de los procesos de formación de <strong>"guetos"</strong> en los proyectos de vivienda de interés social o prioritaria (VIS/VIP).
     </div>
     <div class="zones-row">
-      <div class="zone-chip"><div class="dot dot-red"></div> Barrio Rebolo</div>
-      <div class="zone-chip"><div class="dot dot-red"></div> Localidad Suroriente</div>
-      <div class="zone-chip"><div class="dot dot-gold"></div> 22 manifestaciones</div>
-      <div class="zone-chip"><div class="dot dot-red"></div> Alta complejidad social</div>
+      <div class="zone-chip"><div class="dot dot-red"></div> Barrio Rebolo · Suroriente</div>
+      <div class="zone-chip"><div class="dot dot-gold"></div> Barrio Gran Bazar · Norte-Centro Histórico</div>
+      <div class="zone-chip"><div class="dot dot-red"></div> 22 manifestaciones</div>
+      <div class="zone-chip"><div class="dot dot-gold"></div> Alta complejidad social</div>
     </div>
     <div class="stats-row">
       <div class="stat"><div class="stat-num">22<em> m.</em></div><div class="stat-lbl">Manifestaciones</div></div>
@@ -257,9 +257,16 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
             <div class="fld"><label class="lbl">Cargo / Rol</label>
               <select name="cargo"><option value="">Seleccionar...</option><option>Gestor de Convivencia — OSCC</option><option>Analista Territorial — OSCC</option><option>Consultor — VIRTUS GLOBAL</option><option>Funcionario Alcaldía Local</option><option>Otro</option></select></div>
             <div class="fld"><label class="lbl">Localidad</label>
-              <select name="localidad"><option value="suroriente" selected>Suroriente</option><option>Norte-Centro Histórico</option><option>Sur Occidente</option><option>Riomar</option><option>Metropolitana</option></select></div>
+              <input type="text" name="localidad" id="localidadInput" placeholder="Se actualiza según el barrio" readonly style="background:var(--brd2);color:var(--ink3);">
+            </div>
           </div>
-          <div class="fld"><label class="lbl">Barrio / Sector específico <span class="req">*</span></label><input type="text" name="barrio_sector" value="Rebolo" required></div>
+          <div class="fld"><label class="lbl">Barrio / Sector específico <span class="req">*</span></label>
+            <select name="barrio_sector" id="barrioSelect" required>
+              <option value="">— Seleccione barrio —</option>
+              <option value="Rebolo">Rebolo</option>
+              <option value="Gran Bazar">Gran Bazar</option>
+            </select>
+          </div>
           <div class="fld"><label class="lbl">Tipo de levantamiento</label>
             <div class="opts h">
               <label class="opt"><input type="radio" name="tipo_levant" value="campo"> 🚶 Recorrido de campo</label>
@@ -344,7 +351,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m1_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m1_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -377,7 +384,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m2_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m2_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -410,7 +417,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m3_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m3_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -443,7 +450,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m4_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m4_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               <div class="fld"><label class="lbl">¿Se han presentado operativos de control?</label>
@@ -481,7 +488,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m5_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m5_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -514,7 +521,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m6_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m6_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -547,7 +554,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m7_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m7_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               <div class="fld"><label class="lbl">Tipo de desorden observado</label>
@@ -586,7 +593,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m8_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m8_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               <div class="fld"><label class="lbl">¿Entre qué bloques o sectores se dan los conflictos?</label>
@@ -620,7 +627,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m9_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m9_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               <div class="fld"><label class="lbl">Tipo de actividades ilegales en equipamientos</label>
@@ -682,7 +689,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m10_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m10_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -715,7 +722,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m11_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m11_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -748,7 +755,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m12_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m12_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -781,7 +788,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m13_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m13_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -814,7 +821,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m14_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m14_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -847,7 +854,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m15_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m15_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -880,7 +887,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m16_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m16_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -913,7 +920,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m17_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m17_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -946,7 +953,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m18_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m18_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -979,7 +986,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m19_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m19_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -1012,7 +1019,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m20_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m20_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -1045,7 +1052,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m21_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m21_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -1078,7 +1085,7 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
               </div>
               <div class="fld">
                 <label class="lbl">Descripción de la situación observada <span class="req">*</span></label>
-                <textarea name="m22_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio Rebolo..."></textarea>
+                <textarea name="m22_desc" maxlength="500" placeholder="Describa cómo se manifiesta esta situación en el barrio..."></textarea>
                 <div class="cc">500 caracteres restantes</div>
               </div>
               
@@ -1153,9 +1160,29 @@ select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
 </div>
 <div class="footer">
   <div><b>OSCC Barranquilla 2026</b> · Ficha PTC5 · Desintegración Social — Proyectos Vivienda VIS/VIP</div>
-  <div>VIRTUS GLOBAL · Consultoría Fase 2 · Barrio Rebolo · Confidencial</div>
+  <div>VIRTUS GLOBAL · Consultoría Fase 2 · Confidencial</div>
 </div>
 <script>
+// Función para actualizar la localidad según el barrio seleccionado
+function actualizarLocalidad() {
+    const barrioSelect = document.getElementById('barrioSelect');
+    const localidadInput = document.getElementById('localidadInput');
+    const barrio = barrioSelect.value;
+    
+    if (barrio === 'Rebolo') {
+        localidadInput.value = 'Suroriente';
+    } else if (barrio === 'Gran Bazar') {
+        localidadInput.value = 'Norte-Centro Histórico';
+    } else {
+        localidadInput.value = '';
+    }
+}
+
+// Asignar el evento change al select de barrio
+document.getElementById('barrioSelect').addEventListener('change', function() {
+    actualizarLocalidad();
+});
+
 const TOTAL_SEC=5;
 let cur=0;
 function goTo(idx){
